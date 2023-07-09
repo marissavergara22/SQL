@@ -1,0 +1,27 @@
+--create grocery store database
+
+CREATE TABLE store (id integer primary key, item text, color text, quantity integer, size text, price integer);
+
+INSERT INTO store VALUES
+(1, "shirt", "blue", 2, "M", 10),
+(2, "jeans", "blue", 4, "L", 30),
+(3, "shorts", "white", 5, "S", 20),
+(4, "hat", "black", 2, "M", 10),
+(5, "gloves", "brown", 6, "XL", 7),
+(6, "sneakers", "tan", 1, "S", 40),
+(7, "socks", "pink", 3, "M", 5),
+(8, "jacket", "red", 4, "S", 40),
+(9, "sweater", "yellow", 3, "L", 35),
+(10, "cardigan", "green", 1, "S", 28),
+(11, "sandals", "orange", 3, "L", 25),
+(12, "heels", "purple", 4, "XL", 23),
+(13, "scarf", "grey", 5, "M", 9),
+(14, "glasses", "black", 2, "XS", 15),
+(15, "tote", "beige", 6, "M", 8);
+
+--display the database ordered by price
+SELECT * FROM store ORDER BY price;
+
+--what is the sum of the number of items in the store?
+SELECT SUM(quantity) FROM store;
+
